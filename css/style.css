@@ -266,25 +266,38 @@ h2{
 /* CONTACT FORM */
 
 .contact-form {
-    width: fit-content;
-    margin: 5% 0;
-}
-.contact-form p{
+    margin: 10% 0;
     display: flex;
-    gap: 4%;
-    margin: 1em; 
-    align-items: stretch;   
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+.contact-form input{
+    height: var(--fs-220);
+    height: 4em;
+    padding: 1em;
 }
 .contact-form button{
-    background-color: var(--clr-light-purple);
-    padding: 0.75em 1em;
+    background-color: var(--clr-theme-accent-dark);
+    /* padding: 0.75em 4em; */
+    height: 4em;
+    width: 12rem;
     border: none;
     font-weight: 600;
-    font-size: 0.8em;    
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .contact-form .error{
     color: var(--clr-accent-5);
     font-size: 0.8em;    
+
+}
+
+@media (max-width: 1024px){
+
+
+    .contact-form {
+        flex-direction: column;
+    }
+
 
 }
