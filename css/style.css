@@ -76,6 +76,16 @@ section {
 .section-gray-bg{
     background-color: var(--clr-dark-bg);
 }
+.section-content{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 8%;
+    padding: 4em 0;
+}
+.section-content-col{
+    min-width: 300px;
+    width: 46%;
+}
 
 /* FONTS */
 
@@ -229,20 +239,11 @@ h2{
 
 /* SOLUTION */
 
-.solution-content{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8%;
-    padding: 10%;
-}
-.solution-content h3{
+#our-solution h3{
     padding-bottom: 1em;
     border-bottom: 1px solid black;
 }
-.solution-col{
-    min-width: 300px;
-    width: 46%;
-}
+
 .solution-list{
     list-style: none;   
     margin: 1em 0;
@@ -292,7 +293,149 @@ h2{
 
 }
 
+
+/* Strategic growth and revenue playbook */
+
+#revenue-playbook .description{
+    font-size: var(--fs-250);
+    line-height: 140%;
+}
+#revenue-playbook .accent-1{color: var(--clr-accent-5);}
+#revenue-playbook .accent-2{color: var(--clr-accent-1);}
+#revenue-playbook .accent-3{color: var(--clr-accent-2);}
+
+.strategy-diagram {
+    position: relative;
+    width: 600px;
+    min-width: 600px;
+    max-width: 600px;
+    height: 600px;
+    min-height: 600px;
+    max-height: 600px;
+}
+.strategy-diagram .circle {
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    padding: 5%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+}
+
+.strategy-diagram .circle p{
+    padding: 0;
+    margin: 0;
+}
+  
+.strategy-diagram .circle1 {
+    top: 0;
+    left: 0;
+    align-items: baseline;
+
+}
+  
+.strategy-diagram  .circle2 {
+    top: 0;
+    right: 0;
+    align-items: end;
+}
+  
+.strategy-diagram .circle3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: flex-end;
+}
+  
+/* Labels */
+.strategy-diagram .label {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: var(--clr-light-red); 
+}
+
+.strategy-diagram .circle2 .label {
+    background-color: var(--clr-light-orange);
+}
+
+
+  
+.strategy-diagram  .circle3 .label {
+    background-color: var(--clr-light-tiff);
+}
+  
+  /* Center Text */
+.strategy-diagram  .center-text {
+    position: absolute;
+    font-size: var(--fs-300);
+    font-family: var(--ff-accent);
+    font-weight: bold;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+}
+  
+/* Overlapping Text */
+.strategy-diagram  .text {
+    position: absolute;
+    color: var(--clr-accent-6);
+}
+  
+  /* Positioning the Overlap Text */
+.strategy-diagram  .scouting {
+    top: 20%;
+    left: 40%;
+}
+  
+.strategy-diagram .hiring {
+    top: 27%;
+    left: 45%;
+}
+  
+.strategy-diagram .matching {
+    top: 52%;
+    left: 10%;
+}
+  
+  .strategy-diagram .audit {
+    top: 50%;
+    left: 62%;
+  }
+  
+  .strategy-diagram  .certificates {
+    top: 57%;
+    left: 55%;
+  }
+
+/*****************************/
+/*********** MOBILE **********/
+/*****************************/
+
 @media (max-width: 1024px){
+
+    .section-content{
+        flex-direction: column;
+        column-gap: 25px;
+        padding: 4em 0;
+    }
+    .section-content-col{
+        min-width: 300px;
+        width: 100%;
+        margin-bottom: 8%;
+    }
 
 
     .contact-form {
