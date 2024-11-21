@@ -78,7 +78,7 @@ section {
 }
 .section-content{
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 8%;
     padding: 4em 0;
 }
