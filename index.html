@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="Kuvio. Blockchain-powered Talent Assessment: Unbiased Precision Hiring" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +20,14 @@
         
         <section id="page-intro" class="section-black-bg">
             <div class="section-body">
-                <div id="logo">Kuvio</div>
+                <div class="logo">Kuvio</div>
                 <p class="text-value-2"><span>Blockchain-powered Talent Assessment:</span> <span>Unbiased Precision Hiring</span></p>
             </div>
             <div class="colorful-separator"></div>
         </section>
+        
 
-        <section id="contents"  class="section-black-bg">
+        <!-- <section id="contents"  class="section-black-bg">
             <div class="section-body">
                 <h3 class="text-value-2">Contents</h3>
                 <ul class="contents-list">
@@ -84,14 +86,14 @@
                 </ul>
             </div> 
             <div class="colorful-separator"></div>
-        </section>
+        </section> -->
         
 
 
         <section id="problem" class="section-gray-bg">
             <div class="section-body">
                 <div class="header">
-                    <h2><span class="contents-numero">01</span> <span class="contents-title">Talent evaluation is hard</span></h2>
+                    <h2>Talent evaluation is hard</h2>
                     <p class="description">And it’s a silent business killer</p>
                 </div>
                 <div class="problems">
@@ -117,7 +119,7 @@
 
         <section id="our-solution" class="section-white-bg">
             <div class="section-body">
-                <h2><span class="contents-numero">02</span> <span class="contents-title">Our solution</span></h2>
+                <h2>Our solution</h2>
                 <div class="solution-content">
                     <div class="solution-col">
                         <h3>Make Assessment Criteria Explicit <br /><br /></h3>
@@ -147,6 +149,31 @@
             </div>
             <div class="colorful-separator"></div>
         </section>
+
+
+        <section id="contact-form"  class="section-gray-bg">
+            <div class="section-body">
+                <div class="logo">Kuvio</div>
+                <h2>Interested? Confused? Willing to know more?</h2>
+                <form id="contactForm" onsubmit="return validateForm()" class="contact-form">
+                    <p class="error" id="errorMessage"></p>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </p>
+                    <p><label for="organization">Organization:</label>
+                        <input type="text" id="organization" name="organization" required placeholder="Enter your organization">
+                    </p>
+                    <p><button type="submit">Send</button></p>
+                  </form>
+            </div>
+            <div class="colorful-separator"></div>
+        </section>
+
 
     </main>
 </body>

@@ -25,7 +25,8 @@
     --fs-body: clamp(14px, 2vw, 30px);
     --fs-200: clamp(18px, 2vw, 28px);  /* 28px */
     --fs-220: clamp(16px, 2vw, 31px);  /* 31px */
-    --fs-300: clamp(38px, 3vw, 54px);  /* 44px */
+    --fs-250: clamp(20px, 4vw, 37px);  /* 37px */
+    --fs-300: clamp(24px, 5vw, 44px);  /* 44px */
     --fs-400: clamp(60px, 4rem + 1vw, 90px);   /* 72px */
    
     --fw-semi-bold: 500;
@@ -126,12 +127,12 @@ h2{
 
 /* PAGE INTRO */
 
-#logo{
+.logo{
     color: var(--clr-theme-accent-dark);
     font-family: var(--ff-accent);
     font-size: var(--fs-200);
     letter-spacing: 120%;
-    margin-bottom: 25%;
+    margin-bottom: 10%;
 }
 
 
@@ -257,6 +258,31 @@ h2{
     text-decoration: underline;
 }
 
-.conclusion{
-    font-size: var(--fs-300);
+#our-solution .conclusion{
+    font-size: var(--fs-250);
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    width: fit-content;
+    margin: 5% 0;
+}
+.contact-form p{
+    display: flex;
+    gap: 4%;
+    margin: 1em; 
+    align-items: stretch;   
+}
+.contact-form button{
+    background-color: var(--clr-light-purple);
+    padding: 1em 1.5em;
+    border: none;
+    font-weight: 600;
+}
+.contact-form .error{
+    color: var(--clr-accent-5);
+    font-size: 0.8em;    
+
 }
