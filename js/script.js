@@ -61,3 +61,36 @@ API = async function(action,data) {
           return [false,er];
       }
 };
+
+
+// AI Messages animation  
+document.addEventListener("DOMContentLoaded", () => {
+  const chatContainer = document.querySelector(".chat-container");
+  const messages = document.querySelectorAll(".message, .divider, .response");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          chatContainer.classList.add("visible");
+          let delay = 0;
+
+          messages.forEach((message) => {
+            setTimeout(() => {
+              message.classList.add("visible");
+            }, delay);
+            delay += 600; // Increase delay for each message
+          });
+
+          // Stop observer to get animation only once 
+          observer.disconnect();
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Block is visible if 50% of it in a visibility zone 
+    }
+  );
+
+  observer.observe(chatContainer);
+});
