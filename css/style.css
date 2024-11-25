@@ -26,8 +26,8 @@
     --fs-180: clamp(14px, 1.5vw, 23px);  /* 23px */
     --fs-200: clamp(18px, 1.75vw, 28px);  /* 28px */
     --fs-220: clamp(16px, 2vw, 31px);  /* 31px */
-    --fs-250: clamp(20px, 4vw, 37px);  /* 37px */
-    --fs-300: clamp(24px, 5vw, 44px);  /* 44px */
+    --fs-250: clamp(20px, 2.5vw, 37px);  /* 37px */
+    --fs-300: clamp(24px, 3vw, 44px);  /* 44px */
     --fs-400: clamp(60px, 4rem + 1vw, 90px);   /* 72px */
    
     --fw-semi-bold: 500;
@@ -674,6 +674,22 @@ h2{
     
     .contact-form {
         flex-direction: column;
+    }
+
+
+    /* Strategic growth and revenue playbook */
+
+    .strategy-diagram {
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+        height: 400px;
+        min-height: 400px;
+        max-height: 400px;
+    }
+    .strategy-diagram .circle {
+        width: 250px;
+        height: 250px;
     }
 
 
