@@ -22,7 +22,7 @@
     --ff-base: "Inter", sans-serif;
     --ff-accent: "Rubik Mono One", serif;
 
-    --fs-body: clamp(14px, 2vw, 30px);
+    --fs-body: clamp(14px, 2vw, 28px);
     --fs-180: clamp(14px, 1.5vw, 23px);  /* 23px */
     --fs-200: clamp(18px, 1.75vw, 28px);  /* 28px */
     --fs-220: clamp(16px, 2vw, 31px);  /* 31px */
@@ -85,6 +85,7 @@ section {
 .section-content-col{
     min-width: 300px;
     width: 46%;
+    margin-bottom: 2.5rem;
 }
 
 /* FONTS */
@@ -467,7 +468,7 @@ h2{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    min-height: 45vw;
+    min-height: 950px;
 }
 .offers-container {
     display: flex;
@@ -650,7 +651,51 @@ h2{
 }
 
 
+/* Path to Kuvio */
+#path-to-kuvio li {
+    margin-bottom: 1em;
+}
+#path-to-kuvio li span {
+    text-decoration: underline;
+}
+#path-to-kuvio .gray-list li{
+    font-size: var(--fs-180);
+    color: var(--clr-accent-6);
+}
 
+
+/* RECAP */
+.consumers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4%;
+    column-gap: 4%;
+    margin: 8% 0 5%;
+}
+.consumer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 22%;
+    min-width: 150px;
+}
+.consumer-number{
+    width: 3rem;
+    height: 3rem;
+    font-family: var(--ff-accent);
+    font-size: var(--fs-200);
+    color: var(--clr-theme-accent-dark);
+    background-color: rgba(60, 109, 184, 0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25em;
+}
+.consumer p{
+    color: var(--clr-accent-6);
+}
 
 /*****************************/
 /*********** MOBILE **********/
