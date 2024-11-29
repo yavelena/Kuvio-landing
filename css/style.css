@@ -18,6 +18,7 @@
     --clr-light-blue: #92caff;
     --clr-light-purple: #a192ff;
     --clr-light-violet: #dc92ff;
+    --clr-light-gray: #E8EBEE;
 
     --ff-base: "Inter", sans-serif;
     --ff-accent: "Rubik Mono One", serif;
@@ -31,6 +32,10 @@
     --fs-400: clamp(60px, 4rem + 1vw, 90px);   /* 72px */
    
     --fw-semi-bold: 500;
+
+    --block-gap: 8%;
+    --block-inner-gap: 2rem;
+    --block-small-gap: 1rem;
 
 }
 
@@ -79,7 +84,7 @@ section {
 .section-content{
     display: flex;
     flex-wrap: wrap;
-    gap: 8%;
+    gap: var(--block-gap);
     padding: 4em 0;
 }
 .section-content-col{
@@ -123,6 +128,12 @@ h2{
 .accent-4{
     color: var(--clr-accent-3);
     background-color: var(--clr-light-purple);
+}
+
+.p-medium-gray{
+    color: var(--clr-accent-6);
+    font-size: var(--fs-180);
+    line-height: 130%;
 }
 
 .colorful-circle{
@@ -236,8 +247,7 @@ h2{
 .tags{
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-    min-width: 50%;
+    gap: var(--block-small-gap); 
 }
 .tag{
     color: var(--clr-dark-bg);
@@ -265,10 +275,9 @@ h2{
     left: 80px;
 }
 .statistics{
-    width: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: var(--block-small-gap);
 
 }
 .statistics div {
@@ -322,7 +331,7 @@ h2{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1em;
+    gap: var(--block-small-gap);
 }
 .contact-form input{
     height: var(--fs-220);
@@ -475,7 +484,7 @@ h2{
     flex-wrap: wrap; 
     justify-content: space-between;
     align-items: flex-end;
-    gap: 1em;
+    gap: var(--block-gap);
     margin: 2em 0;
     position: relative;
 }
@@ -534,9 +543,6 @@ h2{
 .AI-block{
     border-top: 4px solid var(--clr-theme-accent-light);
     padding: 1.5em 0;
-}
-.AI-block p{
-    color: var(--clr-accent-6);
 }
 .chat-container {
     margin: 0 auto 5%;
@@ -664,6 +670,29 @@ h2{
 }
 
 
+/* Project advisors */
+.advisors {
+    flex-direction: row;
+
+}
+.advisor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+}
+.advisor .profile-image{
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--clr-accent-4);
+    margin-bottom: 1em;
+}
+.advisor p{
+    text-align: center;
+    color: var(--clr-light-gray);
+}
+
+
 /* RECAP */
 .consumers{
     display: flex;
@@ -701,6 +730,13 @@ h2{
     height: 60%;
     margin: 1rem 0;
 }
+
+
+/* Blockchain: The Key to Kuvio's Future-Proof Design */
+.first-p{
+    margin-top: 0;
+}
+
 
 /*****************************/
 /*********** MOBILE **********/
