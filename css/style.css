@@ -195,7 +195,9 @@ h2{
 .styled-list-4 li::before{
     color: var(--clr-light-purple); 
 }
-
+.first-p{
+    margin-top: 0 !important;
+}
 
 /* PAGE INTRO */
 
@@ -733,8 +735,8 @@ h2{
 
 
 /* Blockchain: The Key to Kuvio's Future-Proof Design */
-.first-p{
-    margin-top: 0;
+#blockchain-key h3{
+    margin: 2.5rem 0 1.5rem;
 }
 
 
