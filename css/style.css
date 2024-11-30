@@ -33,7 +33,6 @@
    
     --fw-semi-bold: 500;
 
-    --block-gap: 8%;
     --block-inner-gap: 2rem;
     --block-small-gap: 1rem;
 
@@ -84,7 +83,7 @@ section {
 .section-content{
     display: flex;
     flex-wrap: wrap;
-    gap: var(--block-gap);
+    gap: var(--block-inner-gap);
     padding: 4em 0;
 }
 .section-content-col{
@@ -326,34 +325,7 @@ h2{
 }
 
 
-/* CONTACT FORM */
 
-.contact-form {
-    margin: 10% 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--block-small-gap);
-}
-.contact-form input{
-    height: var(--fs-220);
-    height: 4em;
-    padding: 1em;
-}
-.contact-form button{
-    background-color: var(--clr-theme-accent-dark);
-    /* padding: 0.75em 4em; */
-    height: 4em;
-    width: 12rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 3px;
-}
-.contact-form .error{
-    color: var(--clr-accent-5);
-    font-size: 0.8em;    
-
-}
 
 
 /* Strategic growth and revenue playbook */
@@ -369,17 +341,15 @@ h2{
 
 .strategy-diagram {
     position: relative;
-    width: 600px;
-    min-width: 600px;
-    max-width: 600px;
-    height: 600px;
-    min-height: 600px;
-    max-height: 600px;
+    width: 40vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
 }
 .strategy-diagram .circle {
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: 25vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
     padding: 5%;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1); 
@@ -389,6 +359,7 @@ h2{
     text-align: center;
     z-index: 1;
 }
+
 
 .strategy-diagram .circle p{
     padding: 0;
@@ -486,7 +457,7 @@ h2{
     flex-wrap: wrap; 
     justify-content: space-between;
     align-items: flex-end;
-    gap: var(--block-gap);
+    gap: var(--block-inner-gap);
     margin: 2em 0;
     position: relative;
 }
@@ -538,13 +509,15 @@ h2{
 .AI-blocks {
     margin: 2em 0 0;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 2%;
+    gap: var(--block-inner-gap);
 }
 .AI-block{
     border-top: 4px solid var(--clr-theme-accent-light);
     padding: 1.5em 0;
+    min-width: 250px;
+    width: 23%;
 }
 .chat-container {
     margin: 0 auto 5%;
@@ -616,6 +589,7 @@ h2{
   
 .profile {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 1.5rem;
     flex: 1 1 calc(50% - 40px); 
@@ -674,6 +648,7 @@ h2{
 
 /* Project advisors */
 .advisors {
+    margin: 4rem 0;
     flex-direction: row;
 
 }
@@ -681,7 +656,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 28%;
+    flex: 1 1;
 }
 .advisor .profile-image{
     width: 200px;
@@ -740,6 +715,39 @@ h2{
 }
 
 
+
+/* CONTACT FORM */
+
+.contact-form {
+    margin: 10% 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--block-small-gap);
+}
+.contact-form input{
+    height: var(--fs-220);
+    height: 4em;
+    padding: 1em;
+}
+.contact-form button{
+    background-color: var(--clr-theme-accent-dark);
+    /* padding: 0.75em 4em; */
+    height: 4em;
+    width: 12rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+}
+.contact-form .error{
+    color: var(--clr-accent-5);
+    font-size: 0.8em;    
+
+}
+
+
+
 /*****************************/
 /*********** MOBILE **********/
 /*****************************/
@@ -748,8 +756,8 @@ h2{
 
     .section-content{
         flex-direction: column;
-        column-gap: 25px;
-        padding: 4em 0;
+        gap: var(--block-inner-gap);
+        /* padding: 4em 0; */
     }
     .section-content-col{
         width: 100%;
@@ -761,24 +769,24 @@ h2{
     }
     
     .contact-form {
-        flex-direction: column;
+        display: block;
+    }
+
+    .form-field{
+        margin: 1rem 0;
+        width: 100%;
     }
 
 
+    
     /* Strategic growth and revenue playbook */
 
     .strategy-diagram {
-        width: 400px;
-        min-width: 400px;
-        max-width: 400px;
-        height: 400px;
-        min-height: 400px;
-        max-height: 400px;
+        width: 75vw;
     }
     .strategy-diagram .circle {
-        width: 250px;
-        height: 250px;
-    }
+        width: 50vw;
+    } 
 
 
 }
